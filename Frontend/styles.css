@@ -1,0 +1,220 @@
+/* Universal reset and font setup */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* Header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d3d3d3;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #841515;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.menu-icon:hover .bar {
+  background-color: #a51717;
+}
+
+.title {
+  font-size: 32px; /* Larger font size */
+  color: #841515;
+  font-weight: 600;
+  text-shadow: 1px 1px #000;
+}
+
+.logout-button {
+  background-color: #841515;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #a51717;
+}
+
+/* Main content */
+.main-content {
+  padding: 20px;
+}
+
+.sort-section {
+  margin-bottom: 20px;
+}
+
+.sort-text {
+  font-size: 18px;
+  color: #841515;
+  font-weight: 600;
+  text-align: left; /* Left-aligned */
+}
+
+/* Table styling */
+.movie-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.movie-table th,
+.movie-table td {
+  border: 1px solid #ccc;
+  text-align: left;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.movie-table th {
+  background-color: #f9f9f9;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.movie-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.edit-button {
+  background-color: #841515;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.edit-button:hover {
+  background-color: #a51717;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center; /* Centered pagination */
+  align-items: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.pagination p {
+  margin-right: 10px;
+}
+
+.next-link {
+  color: #841515;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.next-link:hover {
+  text-decoration: underline;
+}
+
+/* Styles for Login Page */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 50px 40px;
+  width: 300px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #841515; /* Dark red */
+  margin-bottom: 30px;
+}
+
+.login-heading {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.underline {
+  width: 50px;
+  height: 3px;
+  background-color: #841515;
+  margin: 0 auto 30px auto;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-field {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border-bottom: 1px solid #841515;
+}
+
+.forgot-password {
+  font-size: 12px;
+  color: #841515;
+  text-decoration: none;
+  margin-top: -5px;
+  margin-bottom: 15px;
+  align-self: flex-start;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  background-color: #841515;
+  color: white;
+  font-size: 14px;
+  padding: 12px 0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #a51717;
+}

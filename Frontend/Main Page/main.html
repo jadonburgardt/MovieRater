@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Movie List</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <h1 class="title">My List</h1>
+      <button class="logout-button">Log out</button>
+    </header>
+    <main class="main-content">
+      <div class="sort-section">
+        <p class="sort-text">Sort by ( )</p>
+      </div>
+      <table class="movie-table">
+        <thead>
+          <tr>
+            <th>Movie Name</th>
+            <th>Date Watched</th>
+            <th>Rating</th>
+            <th>Genre</th>
+            <th>Notes</th>
+            <th>Edit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Interstellar</td>
+            <td>01/15/2024</td>
+            <td>100/100</td>
+            <td>Sci-Fi</td>
+            <td>THE BEST...</td>
+            <td><button class="edit-button">Edit</button></td>
+          </tr>
+          <tr>
+            <td>Star Wars Episode III</td>
+            <td>01/15/2024</td>
+            <td>99/100</td>
+            <td>Sci-Fi</td>
+            <td>...</td>
+            <td><button class="edit-button">Edit</button></td>
+          </tr>
+          <!-- Repeat rows as needed -->
+        </tbody>
+      </table>
+      <div class="pagination">
+        <p>Page 1/5</p>
+        <a href="#" class="next-link">Next</a>
+      </div>
+    </main>
+  </body>
+</html>
