@@ -3,7 +3,96 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  background-color: #f2f2f2;
+}
+
+/* Login Page Styles */
+body {
+  background-size: cover;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column; /* Allows "Sign In" to be above the login card */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("./Images/LoginWallpaper.jpg") no-repeat center center fixed; /* Wallpaper */
+  background-size: cover;
+}
+
+.sign-in-title {
+  font-size: 36px; /* Larger text for "Sign In" */
+  font-weight: bold;
+  color: #ffffff; /* White text */
+  margin: 0; /* Remove default margins for precise alignment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  background: rgba(9, 9, 9, 0.8); /* Transparent black background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 50px 40px;
+  width: 300px;
+  text-align: center;
+  color: #ffffff; /* White text inside the card */
+  display: flex; /* Enables alignment of children */
+  flex-direction: column;
+  justify-content: space-between; /* Space between Sign In and form */
+  height: 300px; /* Set a fixed height for consistent spacing */
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-field {
+  background: #333333; /* Darker input field */
+  border: none;
+  padding: 12px;
+  font-size: 14px;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.input-field::placeholder {
+  color: #bbbbbb; /* Placeholder text color */
+}
+
+.input-field:focus {
+  outline: 2px solid #e50914; /* Red border focus */
+}
+
+.forgot-password {
+  font-size: 12px;
+  color: #e50914; /* Red text for "Forgot Password?" */
+  text-decoration: none;
+  margin-top: -5px;
+  margin-bottom: 15px;
+}
+
+.forgot-password:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.login-button {
+  background-color: #e50914; /* Red button */
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #f61d2f; /* Brighter red on hover */
 }
 
 /* Header styling */
@@ -134,87 +223,4 @@ body {
 
 .next-link:hover {
   text-decoration: underline;
-}
-
-/* Styles for Login Page */
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.login-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 50px 40px;
-  width: 300px;
-  text-align: center;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #841515; /* Dark red */
-  margin-bottom: 30px;
-}
-
-.login-heading {
-  font-size: 18px;
-  color: #000;
-  margin-bottom: 10px;
-}
-
-.underline {
-  width: 50px;
-  height: 3px;
-  background-color: #841515;
-  margin: 0 auto 30px auto;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.input-field {
-  border: none;
-  border-bottom: 1px solid #ccc;
-  font-size: 14px;
-  padding: 10px;
-  outline: none;
-}
-
-.input-field:focus {
-  border-bottom: 1px solid #841515;
-}
-
-.forgot-password {
-  font-size: 12px;
-  color: #841515;
-  text-decoration: none;
-  margin-top: -5px;
-  margin-bottom: 15px;
-  align-self: flex-start;
-}
-
-.forgot-password:hover {
-  text-decoration: underline;
-}
-
-.login-button {
-  background-color: #841515;
-  color: white;
-  font-size: 14px;
-  padding: 12px 0;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.login-button:hover {
-  background-color: #a51717;
 }
