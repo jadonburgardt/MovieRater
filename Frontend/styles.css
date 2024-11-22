@@ -1,5 +1,12 @@
-/* Universal reset and font setup */
-/* Universal reset and font setup */
+/* Logo Font Import */
+@font-face {
+  font-family: "LEMON MILK";
+  src: url("fonts/LEMONMILK-Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Universal Styles*/
 body {
   margin: 0;
   padding: 0;
@@ -8,8 +15,30 @@ body {
   color: #f2f2f2; /* Light text color for readability */
 }
 
+/* Header Styles */
+.main-header {
+  font-family: "LEMON MILK", sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  color: #e50914; /* Netflix-style red */
+  position: absolute; /* Position the header at the top-left */
+  top: 20px; /* Adjust spacing from the top */
+  left: 20px; /* Adjust spacing from the left */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Semi-transparent background for contrast */
+  padding: 10px 20px;
+  border-radius: 8px; /* Optional: Add rounded corners */
+  margin: 0;
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
 /* Login Page Styles */
 .login-container {
+  position: relative; /* Ensure child elements like the header align properly */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,7 +120,7 @@ body {
 }
 
 .login-button:hover {
-  background-color: #f61d2f;
+  background-color: #ac1723;
 }
 
 /* Header styling */
