@@ -9,6 +9,10 @@ LOGO FONT IMPORT
 }
 
 /*************************************************************************************************
+Scroll Bar  (Maybe do)
+/*************************************************************************************************/
+
+/*************************************************************************************************
 UNIVERSAL STYLES
 /*************************************************************************************************/
 body {
@@ -127,6 +131,27 @@ LOGIN PAGE
 
 .login-button:hover {
   background-color: #ac1723;
+}
+
+/* Container for aligning links side by side */
+.auth-links {
+  display: flex; /* Flexbox for side-by-side alignment */
+  justify-content: center; /* Center them horizontally */
+  align-items: center; /* Align them vertically */
+  gap: 15px; /* Add space between the links */
+  margin-top: -5px; /* Adjust spacing to match existing styles */
+  margin-bottom: 15px;
+}
+
+/* Styling for Forgot Password and Create Account */
+.forgot-password {
+  font-size: 12px;
+  color: #e50914;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline; /* Add hover effect */
 }
 
 /*************************************************************************************************
@@ -410,6 +435,28 @@ WILL REMOVE THIS COMMENT LATER
   text-align: left;
   padding: 10px;
   font-size: 14px;
+}
+
+/* Ensure the Rank column has a fixed width */
+/* Ensure the Rank column has a fixed width */
+.movie-table th:nth-child(1),
+.movie-table td:nth-child(1) {
+  width: 5%; /* Adjust the percentage as needed */
+  text-align: center; /* Center the text */
+}
+
+/* Ensure the Movie Name column has a fixed width */
+.movie-table th:nth-child(2),
+.movie-table td:nth-child(2) {
+  width: 17.5%; /* Adjust the percentage as needed */
+  text-align: left; /* Align text to the left */
+}
+
+/* Ensure the Notes column has a fixed width */
+.movie-table th:nth-last-child(2), /* Assuming Notes is the second-to-last column */
+.movie-table td:nth-last-child(2) {
+  width: 50%; /* Adjust the percentage as needed */
+  text-align: left; /* Align text to the left */
 }
 
 .movie-table th {
