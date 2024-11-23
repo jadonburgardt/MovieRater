@@ -455,7 +455,7 @@ WILL REMOVE THIS COMMENT LATER
 /* Ensure the Notes column has a fixed width */
 .movie-table th:nth-last-child(2), /* Assuming Notes is the second-to-last column */
 .movie-table td:nth-last-child(2) {
-  width: 50%; /* Adjust the percentage as needed */
+  width: 40%; /* Adjust the percentage as needed */
   text-align: left; /* Align text to the left */
 }
 
