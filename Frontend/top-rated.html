@@ -25,7 +25,6 @@
       <nav class="navbar">
         <ul class="navbar-categories">
           <li><a href="#">My List</a></li>
-          <li><a href="#">My Watchlist</a></li>
           <li><a href="#">RMM Top 100</a></li>
           <li><a href="#">RMM Top 1000</a></li>
           <li><a href="#">Community</a></li>
@@ -55,7 +54,6 @@
             <option value="war">War</option>
             <option value="western">Western</option>
           </select>
-
           <div class="search-bar-container">
             <input
               type="text"
@@ -106,13 +104,16 @@
                 <li>Western</li>
               </ul>
             </li>
-
             <li>Rank (High to Low)</li>
             <li>Rank (Low to High)</li>
             <li>Name (A-Z)</li>
             <li>Name (Z-A)</li>
+            <li>Date Watched (Most Recent)</li>
+            <li>Date Watched (Least Recent)</li>
             <li>Year (Most Recent to Least Recent)</li>
             <li>Year (Least Recent to Most Recent)</li>
+            <li>Duration (Longest to Shortest)</li>
+            <li>Duration (Shortest to Longest)</li>
           </ul>
         </div>
 
@@ -124,6 +125,7 @@
               <th>AVERAGE RATING</th>
               <th>YOUR SCORE</th>
               <th>GENRE</th>
+              <th>WATCHLIST</th>
             </tr>
           </thead>
           <tbody>
@@ -140,6 +142,7 @@
               <td>100/100</td>
               <td>95/100</td>
               <td>Sci-Fi</td>
+              <td><button class="add-button">Add</button></td>
             </tr>
             <tr>
               <td>2.</td>
@@ -154,6 +157,7 @@
               <td>99/100</td>
               <td>90/100</td>
               <td>Sci-Fi</td>
+              <td><button class="add-button">Add</button></td>
             </tr>
           </tbody>
         </table>
@@ -180,5 +184,25 @@
         </div>
       </div>
     </div>
+
+    <style>
+      .add-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e50914;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 12px;
+        margin: 0 auto; /* Center the button */
+      }
+
+      .add-button:hover {
+        background-color: #f61d2f;
+      }
+    </style>
   </body>
 </html>
