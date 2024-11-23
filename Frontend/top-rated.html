@@ -3,106 +3,160 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Site's Top Rated</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>RateMyMovies Top 100</title>
   </head>
   <body>
-    <header class="header">
-      <div class="menu-icon">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+    <div class="page-container">
+      <!-- Header Section -->
+      <header class="top-header">
+        <h1 class="title">RateMyMovies</h1>
+        <div class="header-buttons">
+          <button class="login-button">Login</button>
+          <button class="signup-button">Sign Up</button>
+        </div>
+      </header>
+
+      <!-- Navbar -->
+      <nav class="navbar">
+        <ul class="navbar-categories">
+          <li><a href="#">My List</a></li>
+          <li><a href="#">RMM Top 100</a></li>
+          <li><a href="#">RMM Top 1000</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+        <div class="navbar-search">
+          <select class="filter-dropdown">
+            <option value="all">All</option>
+            <option value="action">Action</option>
+            <option value="adventure">Adventure</option>
+            <option value="animation">Animation</option>
+            <option value="comedy">Comedy</option>
+            <option value="crime">Crime</option>
+            <option value="drama">Drama</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="horror">Horror</option>
+            <option value="romance">Romance</option>
+            <option value="sci-fi">Sci-Fi</option>
+            <option value="thriller">Thriller</option>
+          </select>
+          <div class="search-bar-container">
+            <input
+              type="text"
+              class="search-bar"
+              placeholder="Search movies, shows, and more..."
+            />
+            <i class="fa fa-search spyglass-icon"></i>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Section Title -->
+      <div class="section-title">
+        <p>RateMyMovies Top 100</p>
       </div>
-      <h1 class="title">The Site's Top Rated</h1>
-      <button class="logout-button">Log out</button>
-    </header>
-    <main class="main-content">
-      <table class="movie-table">
-        <thead>
-          <tr>
-            <th>Movie Name</th>
-            <th>Average Rating</th>
-            <th>Genre</th>
-            <th class="sort-column">Sort By ( )</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Interstellar</td>
-            <td>100/100</td>
-            <td>Sci-Fi</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Star Wars Episode III</td>
-            <td>99/100</td>
-            <td>Sci-Fi</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>The Shawshank Redemption</td>
-            <td>97/100</td>
-            <td>...</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>The Godfather</td>
-            <td>95/100</td>
-            <td>...</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>The Dark Knight</td>
-            <td>90/100</td>
-            <td>...</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>The Godfather Part II</td>
-            <td>85/100</td>
-            <td>...</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>12 Angry Men</td>
-            <td>83/100</td>
-            <td>...</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Return of the King</td>
-            <td>80/100</td>
-            <td>...</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Pulp Fiction</td>
-            <td>70/100</td>
-            <td>...</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>The Fellowship of the Ring</td>
-            <td>60/100</td>
-            <td>...</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Forrest Gump</td>
-            <td>40/100</td>
-            <td>...</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="pagination">
-        <p>Page 1/100</p>
-        <a href="#" class="next-link">Next</a>
+
+      <!-- Table Section -->
+      <div class="table-container">
+        <!-- Sort By Section -->
+        <div class="sort-section">
+          <button class="sort-button">
+            Sort by <span class="dropdown-icon">▼</span>
+          </button>
+          <ul class="sort-dropdown">
+            <li>Author</li>
+            <li class="has-nested-dropdown">
+              Genre
+              <ul class="nested-dropdown">
+                <li>Action</li>
+                <li>Adventure</li>
+                <li>Animation</li>
+                <li>Crime</li>
+                <li>Drama</li>
+                <li>Fantasy</li>
+                <li>Horror</li>
+                <li>Romance</li>
+                <li>Sci-Fi</li>
+                <li>Thriller</li>
+              </ul>
+            </li>
+            <li>Rank (High to Low)</li>
+            <li>Rank (Low to High)</li>
+            <li>Name (A-Z)</li>
+            <li>Name (Z-A)</li>
+            <li>Year (Most Recent to Least Recent)</li>
+            <li>Year (Least Recent to Most Recent)</li>
+          </ul>
+        </div>
+
+        <table class="movie-table">
+          <thead>
+            <tr>
+              <th>RANK</th>
+              <th>MOVIE NAME</th>
+              <th>AVERAGE RATING</th>
+              <th>YOUR SCORE</th>
+              <th>GENRE</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1.</td>
+              <td>
+                Interstellar
+                <div class="movie-details">
+                  <p>Director: Christopher Nolan</p>
+                  <p>Year: 2014</p>
+                  <p>Duration: 169 min</p>
+                </div>
+              </td>
+              <td>100/100</td>
+              <td>95/100</td>
+              <td>Sci-Fi</td>
+            </tr>
+            <tr>
+              <td>2.</td>
+              <td>
+                Star Wars Episode III
+                <div class="movie-details">
+                  <p>Director: George Lucas</p>
+                  <p>Year: 2005</p>
+                  <p>Duration: 140 min</p>
+                </div>
+              </td>
+              <td>99/100</td>
+              <td>90/100</td>
+              <td>Sci-Fi</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Pagination Section -->
+        <div class="pagination">
+          <div class="page-navigation">
+            <p class="back-link">Back Page</p>
+            <p class="page-info">Page 1/10</p>
+            <p class="next-link">Next Page</p>
+          </div>
+          <div class="per-page-container">
+            <p>Showing</p>
+            <select class="per-page-dropdown">
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="40">40</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+              <option value="1000">1000</option>
+            </select>
+          </div>
+        </div>
       </div>
-    </main>
+    </div>
   </body>
 </html>
