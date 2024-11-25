@@ -1,21 +1,26 @@
 import { createClient } from "@supabase/supabase-js";
+
 const supabaseUrl = "https://tlmksjidclgymgovixbn.supabase.co";
-const supabaseKey = process.env.SUPABASE_KEY;
+const supabaseKey =
+  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+    .eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRsbWtzamlkY2xneW1nb3ZpeGJuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzI0MDA1ODAsImV4cCI6MjA0Nzk3NjU4MH0
+    .Sb6z90rkaWfzruKpC_Q9Z71z2OyI8ExqOgb8yuNEdUY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Fetch movies from Supabase
 async function fetchMovies() {
-  const { data: movies, error } = await supabase
-    .from("movies")
-    .select("*")
-    .order("rating", { ascending: false }); // Sort by rating, highest to lowest
+  try {
+    const { data: movies, error } = await supabase
+      .from("movies")
+      .select("*")
+      .order("rating", { ascending: false });
 
-  if (error) {
-    console.error("Error fetching movies:", error);
-    return;
+    if (error) throw error;
+
+    populateTable(movies);
+  } catch (error) {
+    console.error("Error fetching movies:", error.message);
   }
-
-  populateTable(movies);
 }
 
 // Populate the movie table
@@ -27,27 +32,15 @@ function populateTable(movies) {
     const row = document.createElement("tr");
     row.innerHTML = `
             <td>${index + 1}.</td>
-            <td>
-                ${movie.series_title}
-                <div class="movie-details">
-                    <p>Director: ${movie.director}</p>
-                    <p>Year: ${movie.released_year}</p>
-                    <p>Duration: ${movie.duration} min</p>
-                </div>
-            </td>
-            <td>${
-              movie.created_at
-                ? new Date(movie.created_at).toLocaleDateString()
-                : "N/A"
-            }</td>
+            <td>${movie.series_title || "N/A"}</td>
+            <td>${movie.released_year || "N/A"}</td>
             <td>${movie.rating || "N/A"}</td>
-            <td>${movie.genre}</td>
-            <td class="notes">${movie.notes || "N/A"}</td>
-            <td><button class="edit-button">Edit</button></td>
+            <td>${movie.genre || "N/A"}</td>
+            <td>${movie.notes || "N/A"}</td>
         `;
     tableBody.appendChild(row);
   });
 }
 
-// Fetch movies when the page loads
+// Fetch and display movies on page load
 fetchMovies();
