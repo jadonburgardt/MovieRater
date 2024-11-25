@@ -211,6 +211,17 @@ TOP-RATED
 /*************************************************************************************************
 MAIN PAGE (MY MOVIE LIST) 
 /*************************************************************************************************/
+
+.add-button {
+  background-color: #ac1723;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
 .section-title {
   background-color: transparent;
   color: #f2f2f2;
